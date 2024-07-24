@@ -3,9 +3,9 @@ import image1 from '../public/image.jpg'; // Replace with your image file path
 
 const AboutUsComponent = () => {
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center h-screen">
+        <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-white">
             {/* Left Side (Image) */}
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 pl-4">
                 <img src='/image1.jpg' alt="About Us" className="w-full h-auto rounded-lg" />
             </div>
             {/* Right Side (Content and Button) */}

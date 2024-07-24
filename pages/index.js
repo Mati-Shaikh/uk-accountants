@@ -7,7 +7,8 @@ import Footer from '../components/footer';
 import LogoComponent from '../components/logo';
 import GetIn from '../components/getIn';
 import Testimonials from '../components/testimonials';
-
+import Talk from '../components/talk';
+import Services from '../components/services'
 
 
 
@@ -19,10 +20,12 @@ export default function Home() {
       <Content />
       <About />
       <LogoComponent/>
-      <Contact/>
+      {/* <Contact/> */}
       <Course/>
       <GetIn/>
+      <Services/>
       <Testimonials/>
+      <Talk/>
       
       </div>
 
