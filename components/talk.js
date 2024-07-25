@@ -1,129 +1,101 @@
 import React, { useState } from 'react';
 
-const Talk = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
+export default function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "7eac81d4-e417-4f94-a376-b44eddee3e39");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
     });
-    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
+    const data = await response.json();
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
 
-        try {
-            const response = await fetch('/api/send-email', { // Your backend endpoint
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                alert('Your message has been sent successfully!');
-                setFormData({ name: '', email: '', message: '' });
-            } else {
-                alert('There was a problem sending your message.');
-            }
-        } catch (error) {
-            alert('There was a problem sending your message.');
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
-
-    return (
-        <div 
-            className="h-screen flex flex-col md:flex-row bg-cover bg-center relative"
-            style={{ backgroundImage: 'url("/image2.jpg")' }} // Replace with your image path
-        >
-            {/* Overlay to darken the background image */}
-            <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
-            
-            {/* Left Side: Talk to Us Section */}
-            <div className="flex-1 flex flex-col justify-center items-center relative z-10 p-8">
-                <div className="text-center mb-8">
-                    <h3 className="text-3xl font-bold mb-4 text-white">Talk to Us</h3>
-                    <hr className="border-t-2 border-gray-400 mb-4 mx-auto w-16" />
-                    <h2 className="text-2xl font-bold mb-4 text-white">We Are Here to Help</h2>
-                    <p className="text-lg text-gray-300 mb-4">
-                        If you have any questions or need further assistance, feel free to reach out to us.
-                    </p>
-                    <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
-                        Contact Us
-                    </button>
-                </div>
-            </div>
-
-            {/* Right Side: Form Section */}
-            <div className="flex-1 flex justify-center items-center p-8 relative z-10">
-                <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-                    <h4 className="text-xl font-bold mb-4">Get in Touch</h4>
-                    <form onSubmit={handleSubmit}>
-                        <div className="mb-4">
-                            <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                                required
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                                required
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
-                                Message
-                            </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                rows="4"
-                                value={formData.message}
-                                onChange={handleChange}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
-                                required
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            className="w-full bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300"
-                            disabled={isSubmitting}
-                        >
-                            {isSubmitting ? 'Submitting...' : 'Submit'}
-                        </button>
-                    </form>
-                </div>
-            </div>
+  return (
+    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/image3.jpg")' }}> {/* Replace with your background image path */}
+      <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
+      <div className="relative z-10 min-h-screen flex">
+        {/* Left Side: Content Section */}
+        <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-opacity-75">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold text-gray-400">Contact Us</h2>
+            <p className="text-lg text-gray-100">
+              If you have any questions or need further assistance, feel free to reach out to us.
+            </p>
+          </div>
         </div>
-    );
-};
 
-export default Talk;
+        {/* Right Side: Form Section */}
+        <div className="w-full md:w-1/2 flex items-center justify-center p-8">
+          <div className="max-w-md w-full space-y-8 bg-white rounded-xl shadow-lg p-10">
+            <form className="space-y-6" onSubmit={onSubmit}>
+              <div className="rounded-md shadow-sm space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Email"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Submit Form
+                </button>
+              </div>
+            </form>
+            <div className="text-center text-gray-500 mt-4">
+              <span>{result}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -17,7 +17,7 @@ export default function Footer() {
        
        
         <div className=" mt-12 border-t-4 border-zinc-200 pt-8 text-center ">
-          <p className="text-white">&copy; 2024 Mati Ur Rehman. All rights reserved.</p>
+          <p className="text-white">&copy; 2024 UK Accountants. All rights reserved.</p>
         </div>
         
     </footer>
