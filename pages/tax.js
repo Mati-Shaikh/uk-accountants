@@ -6,7 +6,7 @@ import Services from '../components/services';
 import Logo from '../components/logo';
 import Talk from '../components/talk';
 import GetIn from '../components/getIn';
-const Business = () => {
+const Tax = () => {
     return (
         <div>
       <Navbar />
@@ -16,7 +16,7 @@ const Business = () => {
             <div className="relative h-full flex flex-col justify-center items-center">
                 <div className="max-w-3xl mx-auto px-6 text-center">
                     <h1 className="text-white text-4xl md:text-6xl font-bold animate-bounce">
-                        Business Strategy & Solutions
+                        Tax Advisory , Compliance & Planning
                     </h1>
                     <p className="text-white mt-4 mb-8 text-lg md:text-2xl">
                         Experience the Best Services with Us
@@ -35,4 +35,4 @@ const Business = () => {
     );
 };
 
-export default Business;
+export default Tax;
