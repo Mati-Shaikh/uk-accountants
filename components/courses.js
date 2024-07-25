@@ -1,6 +1,12 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const Course = () => {
+    const router = useRouter();
+
+    const handleClick = () => {
+      router.push('/story');
+    };
     return (
         <div className="relative bg-center min-h-screen bg-white">
             <div className="absolute inset-0 bg-white opacity-75"></div>
@@ -13,7 +19,7 @@ const Course = () => {
                     <p className="text-lg text-gray-900 mb-8 animate__animated animate__fadeIn animate__delay-2s">
                         Over the years, we’ve built up particular experience in working with some specific types of business. Up in Birmingham, Ian knows recruitment, retail and startups, both as an accountant and on the front line. Down in Cornwall, Tom has gained a reputation for his work with dentists and agricultural businesses over the course of a 50-year career.
                     </p>
-                    <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300 animate__animated animate__fadeIn animate__delay-3s">
+                    <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300 animate__animated animate__fadeIn animate__delay-3s" onClick={handleClick}> 
                         All Services
                     </button>
                 </div>

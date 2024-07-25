@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 const cards = [
   {
@@ -14,6 +15,11 @@ const cards = [
 ];
 
 const ServiceComponent = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/test');
+  };
   return (
     <div className="relative bg-cover bg-center" style={{ backgroundImage: "url('/service.jpeg')" }}>
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 bg-opacity-50 p-8">
@@ -23,7 +29,7 @@ const ServiceComponent = () => {
           <p className="text-gray-300 mb-6">
             Explore our services designed to help you achieve your goals. Our solutions are tailored to meet your needs and exceed your expectations.
           </p>
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
             All Services
           </button>
         </div>

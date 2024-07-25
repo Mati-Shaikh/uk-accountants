@@ -1,7 +1,12 @@
 import React from 'react';
 import image1 from '../public/image.jpg'; // Replace with your image file path
-
+import { useRouter } from 'next/router';
 const AboutUsComponent = () => {
+    const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/story');
+  };
     return (
         <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-white">
             {/* Left Side (Image) */}
@@ -14,7 +19,7 @@ const AboutUsComponent = () => {
                 <p className="text-lg mb-8">
                     Here at HHM Accountants, our skilled Accountants, Tax Consultants, and Business Advisors are here to help small and medium-sized businesses. Our team comprises extensively qualified Chartered Accountants and renowned industry business consultants.
                 </p>
-                <button className="bg-white text-gray-900 px-6 py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-300 ease-in-out">
+                <button className="bg-white text-gray-900 px-6 py-3 rounded-lg shadow-md hover:bg-gray-300 transition duration-300 ease-in-out" onClick={handleClick}>
                     About Us
                 </button>
             </div>

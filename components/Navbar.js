@@ -111,7 +111,7 @@ export default function Navbar() {
                 </div>
               ))}
 
-              <div className="py-6">
+              {/* <div className="py-6">
                 <Link href="/blog">
                   <a className="w-full inline-flex items-center justify-center px-8 py-2 font-medium rounded-md text-white hover:text-blue-900 duration-300">
                     <Image
@@ -122,7 +122,7 @@ export default function Navbar() {
                     />
                   </a>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </Disclosure.Panel>
         </>

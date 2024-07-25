@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 // Dynamically import the MapContainer and other Leaflet components
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
@@ -19,6 +20,11 @@ const cities = [
 
 const LogoComponent = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/test');
+  };
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-white pb-24">
@@ -29,7 +35,7 @@ const LogoComponent = () => {
           <p className="text-gray-700 mb-4">
             Explore our extensive range of services offered across various cities in the UK. We provide top-notch solutions tailored to your needs, wherever you are.
           </p>
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
             Our Services
           </button>
         </div>

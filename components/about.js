@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 
 // Import any necessary styles for the image if required
 
 const LogoComponent = () => {
   const [hoveredCity, setHoveredCity] = useState(null);
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/story');
+  };
 
   return (
+
     <div className="min-h-screen flex flex-col md:flex-row bg-white pb-24">
       {/* Left Side: Content Section */}
       <div className="flex-1 flex flex-col justify-center items-center bg-white p-8">
@@ -18,7 +25,7 @@ We’re led by a close-knit father and son team across two offices, one in Birmi
 
 Between them, Tom and Ian have experience of supporting businesses in most sectors, from tech startups to dentists, and enjoy helping small businesses across the UK achieve their full potential.
           </p>
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300">
+          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
             Our Story
           </button>
         </div>
