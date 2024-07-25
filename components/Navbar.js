@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Business Services', href: '/test', subItems: ['Consulting', 'Strategy', 'Solutions'] },
   { name: 'Tax Services', href: '/test', subItems: ['Advisory', 'Compliance', 'Planning'] },
   { name: 'Training', href: '/test', subItems: ['Workshops', 'Courses', 'Webinars'] },
-  { name: 'Contact us', href: '/test', subItems: [] }
+  { name: 'Contact us', href: '/contact', subItems: [] }
 ];
 
 export default function Navbar() {
