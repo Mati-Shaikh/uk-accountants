@@ -29,22 +29,22 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/image3.jpg")' }}> {/* Replace with your background image path */}
       <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
-      <div className="relative z-10 min-h-screen flex">
+      <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
         {/* Left Side: Content Section */}
-        <div className="w-full md:w-1/2 flex items-center justify-center p-8 bg-opacity-75">
+        <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8 bg-opacity-75">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl font-bold text-gray-400">Contact Us</h2>
-            <p className="text-lg text-gray-100">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-300 md:text-gray-400">Contact Us</h2>
+            <p className="text-base md:text-lg text-gray-200 md:text-gray-100">
               If you have any questions or need further assistance, feel free to reach out to us.
             </p>
           </div>
         </div>
 
         {/* Right Side: Form Section */}
-        <div className="w-full md:w-1/2 flex items-center justify-center p-8">
-          <div className="max-w-md w-full space-y-8 bg-white rounded-xl shadow-lg p-10">
+        <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8">
+          <div className="max-w-md w-full space-y-8 bg-white rounded-xl shadow-lg p-6 md:p-10">
             <form className="space-y-6" onSubmit={onSubmit}>
-              <div className="rounded-md shadow-sm space-y-4">
+              <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">Name</label>
                   <input
@@ -53,7 +53,7 @@ export default function Contact() {
                     type="text"
                     autoComplete="name"
                     required
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Name"
                   />
                 </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                     type="email"
                     autoComplete="email"
                     required
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Email"
                   />
                 </div>
@@ -76,7 +76,7 @@ export default function Contact() {
                     name="message"
                     rows="4"
                     required
-                    className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    className="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     placeholder="Message"
                   ></textarea>
                 </div>
@@ -84,7 +84,7 @@ export default function Contact() {
               <div>
                 <button
                   type="submit"
-                  className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  className="w-full py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Submit Form
                 </button>

@@ -68,7 +68,7 @@ export default function Navbar() {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="hidden md:flex items-center ml-8">
+                {/* <div className="hidden md:flex items-center ml-8">
                   <Link href="/blog">
                     <a className="inline-flex items-center px-8 py-2 font-medium rounded-md text-white hover:text-blue-900 duration-300">
                       <Image
@@ -79,7 +79,7 @@ export default function Navbar() {
                       />
                     </a>
                   </Link>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

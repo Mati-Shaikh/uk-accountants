@@ -2,6 +2,7 @@ import React from 'react';
 import About from '../components/about';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
+import Testimonial from '../components/testimonials';
 const Story = () => {
     return (
         <div>
@@ -17,12 +18,11 @@ const Story = () => {
                     <p className="text-white mt-4 mb-8 text-lg md:text-2xl">
                         Experience the Best Services with Us
                     </p>
-                    <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300">
-                        Get Started
-                    </button>
+                    
                 </div>
             </div>
 <About/>
+<Testimonial/>
 <Footer/>
         </div>
        
