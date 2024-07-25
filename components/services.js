@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const cards = [
   {
     logo: '/image1.jpg', // Replace with your logo image path
@@ -30,9 +29,9 @@ const ServiceComponent = () => {
         </div>
 
         {/* Cards Section */}
-        <div className="flex gap-8 justify-center">
+        <div className="flex flex-col md:flex-row gap-8 justify-center">
           {cards.map((card, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg w-full md:w-80 text-center">
               <div className="flex justify-center mb-4">
                 <img src={card.logo} alt={card.name} className="w-24 h-24 rounded-full object-cover" />
               </div>
