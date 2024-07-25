@@ -7,7 +7,7 @@ import { faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-i
 
 const navigation = [
   { name: 'Home', href: '/', subItems: [] },
-  { name: 'About us', href: '/test', subItems: ['Our Team', 'Our Story', 'Our Values'] },
+  { name: 'About us', href: '/story', subItems: ['Our Story', 'Our Values'] },
   { name: 'Business Services', href: '/test', subItems: ['Consulting', 'Strategy', 'Solutions'] },
   { name: 'Tax Services', href: '/test', subItems: ['Advisory', 'Compliance', 'Planning'] },
   { name: 'Training', href: '/test', subItems: ['Workshops', 'Courses', 'Webinars'] },
