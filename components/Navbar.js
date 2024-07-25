@@ -84,7 +84,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="md:hidden border-t-2 border-white">
+          <Disclosure.Panel className="md:hidden border-t-2 border-white overflow-y-auto max-h-screen">
             <div className="px-10 py-8 space-y-8">
               {navigation.map(({ name, href, subItems }) => (
                 <div key={name}>
