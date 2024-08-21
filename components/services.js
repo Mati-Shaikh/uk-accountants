@@ -12,11 +12,6 @@ const cards = [
     name: 'Tax Services',
     description: ' Comprehensive tax solutions designed to simplify compliance, maximize deductions, and minimize liabilities for businesses and individuals alike',
   },
-  {
-    logo: '/image.jpg', // Replace with your logo image path
-    name: 'Accounting Services',
-    description: 'Comprehensive accounting solutions tailored to your business, providing accurate financial reporting, strategic insights, and meticulous bookkeeping to enhance your financial success.',
-  },
 ];
 
 const ServiceComponent = () => {

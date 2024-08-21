@@ -27,10 +27,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/image3.jpg")' }}> {/* Replace with your background image path */}
+    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/image3.jpg")' }}>
       <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
       <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
-        {/* Left Side: Content Section */}
+        
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8 bg-opacity-75">
           <div className="text-center space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-300 md:text-gray-400">Contact Us</h2>
@@ -40,7 +40,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Side: Form Section */}
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8">
           <div className="max-w-md w-full space-y-8 bg-white rounded-xl shadow-lg p-6 md:p-10">
             <form className="space-y-6" onSubmit={onSubmit}>
@@ -90,9 +89,13 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-            <div className="text-center text-gray-500 mt-4">
-              <span>{result}</span>
-            </div>
+
+            {result && (
+              <div className="text-center text-gray-500 mt-4" style={{width:'80%', background:'#4C9A2A', border: '1.5px solid green', borderRadius:'10px', marginLeft:'9%'}}>
+                <span style={{color:'white', fontSize:'0.8rem'}}>{result}</span>
+              </div>
+            )}
+
           </div>
         </div>
       </div>
