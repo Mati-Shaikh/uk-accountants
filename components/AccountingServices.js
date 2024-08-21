@@ -14,11 +14,11 @@ const AccountingServices = () => {
             </li>
             <li className="mb-4">
               <strong>Year End Accounts - Clear and Precise Financial Reporting!</strong>
-              <p>Ensure your financial statements are accurate and comply with regulations. Wise Numbers LTD prepares your annual accounts, delivering detailed financial reporting to help you comply with companies’ house and HMRC requirements.</p>
+              <p>Ensure your financial statements are accurate and comply with regulations. Wise Numbers LTD prepares your annual accounts, delivering detailed financial reporting to help you comply with companies house and HMRC requirements.</p>
             </li>
             <li className="mb-4">
               <strong>Strategic Management Accounting - Insights for Smarter Decisions!</strong>
-              <p>Gain valuable insights into your business's financial performance with our strategic management accounting. Wise Numbers LTD provides the analysis you need for better decision-making, including cash flow, forecast, budgets, and profitability reports.</p>
+              <p>Gain valuable insights into your business financial performance with our strategic management accounting. Wise Numbers LTD provides the analysis you need for better decision-making, including cash flow, forecast, budgets, and profitability reports.</p>
             </li>
             <li className="mb-4">
               <strong>VAT Compliance & Digital Reporting - Stay Ahead with VAT and MTD!</strong>
