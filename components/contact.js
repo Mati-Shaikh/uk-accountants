@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Contact = () => {
-    // Sample data for the cards (you can replace with your actual data)
     const cards = [
         {
             id: 1,
