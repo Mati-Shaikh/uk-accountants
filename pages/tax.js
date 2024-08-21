@@ -1,5 +1,5 @@
 import React from 'react';
-import About from '../components/about';
+import TaxContent from '../components/taxContent';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 import Services from '../components/services';
@@ -24,7 +24,9 @@ const Tax = () => {
                     
                 </div>
             </div>
+            <TaxContent/>
             <Logo/>
+            
 <Services/>
 <GetIn/>
 <Talk/>

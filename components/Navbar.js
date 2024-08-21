@@ -2,15 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Disclosure, Menu } from '@headlessui/react';
 import { MenuIcon, XIcon, ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const navigation = [
   { name: 'Home', href: '/', subItems: [] },
   { name: 'About us', href: '/story', subItems: ['Our Story', 'Our Values'] },
   { name: 'Business Services', href: '/test', subItems: ['Consulting', 'Strategy', 'Solutions'] },
   { name: 'Tax Services', href: '/tax', subItems: ['Advisory', 'Compliance', 'Planning'] },
-  { name: 'Training', href: '/Train', subItems: ['Workshops', 'Courses', 'Webinars'] },
+  { name: 'Accounting Services', href: '/Train', subItems: ['Bookkeeping', 'Year End Accounts ', 'More'] },
   { name: 'Contact us', href: '/contact', subItems: [] }
 ];
 

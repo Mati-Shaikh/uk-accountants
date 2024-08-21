@@ -19,11 +19,7 @@ const LogoComponent = () => {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-4">A family firm.</h2>
           <p className="text-gray-700 mb-4">
-          Our advice isn’t just built on an in-depth knowledge of tax and accounting but also on real-world experience running and working for SMEs.
-
-We’re led by a close-knit father and son team across two offices, one in Birmingham and one on the Cornish coast, in Falmouth.
-
-Between them, Tom and Ian have experience of supporting businesses in most sectors, from tech startups to dentists, and enjoy helping small businesses across the UK achieve their full potential.
+          Wise Numbers LTD, founded by Farhan Butt, a seasoned Chartered Accountant with Big 4 and Fortune 500 experience, is a family-oriented firm with a strong presence across the UK. Farhan's diverse expertise drives the firm’s mission to offer top-tier financial guidance tailored to each client's unique needs. Supported by a team of skilled bookkeepers, accountants, and tax experts, Wise Numbers serves a wide range of clients, from individual freelancers to large organizations. Their comprehensive services, including strategic financial consultancy and advanced tax planning, make them a trusted partner in achieving financial success and peace of mind
           </p>
           <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
             Our Story

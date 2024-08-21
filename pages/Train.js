@@ -1,5 +1,5 @@
 import React from 'react';
-import About from '../components/about';
+import AccountingServices from '../components/AccountingServices';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 import Services from '../components/services';
@@ -16,7 +16,7 @@ const Train = () => {
             <div className="relative h-full flex flex-col justify-center items-center">
                 <div className="max-w-3xl mx-auto px-6 text-center">
                     <h1 className="text-white text-4xl md:text-6xl font-bold animate-bounce">
-                        Training & Workshops
+                        Accounting Services
                     </h1>
                     <p className="text-white mt-4 mb-8 text-lg md:text-2xl">
                         Experience the Best Services with Us
@@ -24,6 +24,7 @@ const Train = () => {
                     
                 </div>
             </div>
+            <AccountingServices/>
             <Logo/>
 <Services/>
 <GetIn/>
