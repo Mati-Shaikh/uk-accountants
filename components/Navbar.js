@@ -31,7 +31,7 @@ export default function Navbar() {
               {/* Mobile Logo */}
               <div className="block lg:hidden">
                 <img
-                  src="/Mobilelogo.png"
+                  src="/MobileLogo.png"
                   alt="Mobile Logo"
                   style={{ height: "80px", width: "70px" }}
                 />
