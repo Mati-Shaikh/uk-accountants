@@ -1,5 +1,5 @@
 import React from 'react';
-import About from '../components/about';
+import ServicesContent from '../components/ServicesContent';
 import Navbar from '../components/Navbar';
 import Footer from '../components/footer';
 import Services from '../components/services';
@@ -24,6 +24,7 @@ const Business = () => {
                     
                 </div>
             </div>
+            <ServicesContent/>
             <Logo/>
 <Services/>
 <GetIn/>

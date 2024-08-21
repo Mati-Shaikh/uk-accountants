@@ -13,7 +13,7 @@ const Content = () => {
                         Experience the Best Services with Us
                     </p>
                     <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300">
-                        Get Started
+                        Let's Start
                     </button>
                 </div>
             </div>
