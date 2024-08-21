@@ -47,7 +47,7 @@ const ServiceComponent = () => {
           <p className="text-gray-300 mb-6">
             Explore our services designed to help you achieve your goals. Our solutions are tailored to meet your needs and exceed your expectations.
           </p>
-          <button className="bg-blue-500 text-white py-2 px-4 md:py-2 md:px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
+          <button className="bg-[#3b445f] text-white py-2 px-4 md:py-2 md:px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
             All Services
           </button>
         </div>
@@ -62,7 +62,7 @@ const ServiceComponent = () => {
               <h3 className="text-lg md:text-xl font-semibold mb-2">{card.name}</h3>
               <p className="text-gray-700 mb-4">{card.description}</p>
               <button
-                className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
+                className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-[#3b445f] transition duration-300"
                 onClick={() => openModal(card.name, card.description)}
               >
                 Read More

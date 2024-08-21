@@ -14,28 +14,28 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="fixed top-0 w-full bg-sky-500 shadow-sm z-50 h-18">
+    <Disclosure as="nav" className="fixed top-0 w-full bg-[#3b445f] shadow-sm z-50 h-18">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-8 lg:px-12">
             <div className="flex justify-between items-center h-24">
-              <div className="flex items-center">
-                <span>
-                  <Image
-                    src="/logo.svg"
+              
+             
+                  <img
+                    src="/logo.png"
                     alt="Logo"
-                    width={55}
-                    height={47}
+                    style={{ height: "170px", width: "150px" }}
                   />
-                </span>
-              </div>
+
+                
+             
 
               <div className="flex-grow flex justify-center">
                 <div className="hidden md:flex space-x-0">
                   {navigation.map(({ name, href, subItems }) => (
                     <div className="relative group" key={name}>
                       <Link href={href}>
-                        <a className="inline-flex items-center px-8 py-2 font-medium rounded-md text-white hover:text-blue-500 duration-100">
+                        <a className="inline-flex items-center px-8 py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100">
                           {name}
                         </a>
                       </Link>

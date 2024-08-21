@@ -35,7 +35,7 @@ const LogoComponent = () => {
           <p className="text-gray-700 mb-4">
             Explore our extensive range of services offered across various cities in the UK. We provide top-notch solutions tailored to your needs, wherever you are.
           </p>
-          <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
+          <button className="bg-[#3b445f] text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300" onClick={handleClick}>
             Our Services
           </button>
         </div>

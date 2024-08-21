@@ -12,7 +12,7 @@ const Content = () => {
                     <p className="text-white mt-4 mb-8 text-lg md:text-2xl">
                         Experience the Best Services with Us
                     </p>
-                    <button className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300">
+                    <button className="px-8 py-3 bg-[#3b445f] text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300">
                         Lets Start
                     </button>
                 </div>

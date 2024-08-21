@@ -19,7 +19,7 @@ const Course = () => {
                     <p className="text-lg text-gray-900 mb-8 animate__animated animate__fadeIn animate__delay-2s">
                     Our comprehensive business services are tailored to meet the unique needs of each client, offering everything from financial planning and bookkeeping to strategic management advice. We provide expert guidance on navigating complex regulatory landscapes, optimizing business operations, and driving growth. At Wise Numbers LTD, we empower businesses to achieve long-term success with personalized, proactive support.
                     </p>
-                    <button className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300 animate__animated animate__fadeIn animate__delay-3s" onClick={handleClick}> 
+                    <button className="bg-[#3b445f] text-white py-2 px-6 rounded-lg hover:bg-blue-600 transition duration-300 animate__animated animate__fadeIn animate__delay-3s" onClick={handleClick}> 
                         All Services
                     </button>
                 </div>
@@ -34,7 +34,7 @@ const Course = () => {
                         <h3 className="text-xl font-semibold mb-2">Healthcare</h3>
                         <p className="text-gray-700 mb-4">Medical practices, GPs, dentists, supported living and care homes.
                         </p>
-                        <a href="#" className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
+                        <a href="#" className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
                     </div>
 
                     {/* Card 2 */}
@@ -45,7 +45,7 @@ const Course = () => {
                         <h3 className="text-xl font-semibold mb-2">Financial Services</h3>
                         <p className="text-gray-700 mb-4">Mortgage brokers, insurance and investment firms and financial advisors.
                         </p>
-                        <a href="#" className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
+                        <a href="#" className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
                     </div>
 
                     {/* Card 3 */}
@@ -55,7 +55,7 @@ const Course = () => {
                         </div>
                         <h3 className="text-xl font-semibold mb-2">Professional Services</h3>
                         <p className="text-gray-700 mb-4">Legal firms, consulting agencies, and marketing companies</p>
-                        <a href="#" className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
+                        <a href="#" className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
                     </div>
                 </div>
             </div>
