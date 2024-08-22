@@ -17,14 +17,14 @@ export default function Navbar() {
     <Disclosure as="nav" className="fixed top-0 w-full bg-[#3b445f] shadow-sm z-50 h-18">
       {({ open }) => (
         <>
-          <div className="max-w-7xl mx-auto px-8 lg:px-12">
+          <div className=" mx-auto">
             <div className="flex justify-between items-center h-24">
               {/* Desktop Logo */}
               <div className="hidden lg:block">
                 <img
                   src="/logo.png"
                   alt="Logo"
-                  style={{ height: "170px", width: "150px" }}
+                  style={{ height: "220px", width: "180px" }}
                 />
               </div>
               
@@ -37,12 +37,12 @@ export default function Navbar() {
                 />
               </div>
 
-              <div className="flex-grow flex justify-center">
-                <div className="hidden lg:flex space-x-0"> {/* Use lg instead of md */}
+              <div className="flex-grow mr-12 flex justify-center">
+                <div className="hidden lg:flex space-x-12"> {/* Use lg instead of md */}
                   {navigation.map(({ name, href, subItems }) => (
                     <div className="relative group" key={name}>
                       <Link href={href}>
-                        <a className="inline-flex items-center px-8 py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100">
+                        <a className="inline-flex items-center py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100">
                           {name}
                         </a>
                       </Link>
