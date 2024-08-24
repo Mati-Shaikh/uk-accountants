@@ -8,19 +8,20 @@ import LogoComponent from '../components/logo';
 import GetIn from '../components/getIn';
 import Testimonials from '../components/testimonials';
 import Talk from '../components/talk';
-import Services from '../components/services'
+import Services from '../components/services';
+import AnimatedHero from '../components/hero';
 
 
 
 export default function Home() {
   return (
     <div>
+      
       <Navbar />
+      <AnimatedHero />
       <div className='pt-24'>
-      <Content />
-      <About />
       <LogoComponent/>
-      {/* <Contact/> */}
+      <About />
       <Course/>
       <GetIn/>
       <Services/>
