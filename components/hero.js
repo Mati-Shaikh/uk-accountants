@@ -6,10 +6,13 @@ const ContentPictureComponent = () => {
     <div className="flex flex-col lg:flex-row items-center lg:items-start p-4">
       {/* Content Section */}
       <div className="lg:w-1/2 p-4 mt-24 flex flex-col justify-center text-center">
-        <h1 className="typing-animation mb-4 font-bold text-xl lg:text-2xl mt-16">Wise Numbers LTD</h1>
-        <p className="text-base lg:text-lg text-gray-700">
-          Wise Numbers LTD, founded by Farhan Butt, a seasoned Chartered Accountant with Big 4 and Fortune 500 experience, is a family-oriented firm with a strong presence across the UK. Farhan diverse expertise drives the firm mission to offer top-tier financial guidance tailored to each client unique needs. Supported by a team of skilled bookkeepers, accountants, and tax experts, Wise Numbers serves a wide range of clients, from individual freelancers to large organizations. Their comprehensive services, including strategic financial consultancy and advanced tax planning, make them a trusted partner in achieving financial success and peace of mind.
-        </p>
+      <h1 className="font-montserrat typing-animation mb-4 font-bold text-[#3b445f] lg:text-2xl mt-16 " style={{ fontSize: "2.4rem" }}>
+      Wise Numbers LTD
+    </h1>
+        <p className="text-base lg:text-lg text-gray-700 mt-12">
+  Wise Numbers LTD, led by Farhan Butt, is a family-oriented firm with extensive experience in the UK. The firm provides expert financial guidance tailored to individual client needs. Supported by a skilled team of bookkeepers, accountants, and tax experts, Wise Numbers caters to a diverse clientele, from freelancers to large organizations. Their services include strategic financial consultancy and advanced tax planning, making them a trusted partner for achieving financial success and peace of mind.
+</p>
+
       </div>
       
       {/* Picture Section */}
