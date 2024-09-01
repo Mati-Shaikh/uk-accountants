@@ -20,7 +20,7 @@ export default function Home() {
       <Navbar />
       <AnimatedHero />
       <div className='pt-24'>
-      <LogoComponent/>
+      {/* <LogoComponent/> */}
       <About />
       <Course/>
       <GetIn/>

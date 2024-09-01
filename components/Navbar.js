@@ -24,7 +24,7 @@ export default function Navbar() {
                 <img
                   src="/logo.png"
                   alt="Logo"
-                  style={{ height: "220px", width: "180px" }}
+                  style={{ height: "260px", width: "280px" }}
                 />
               </div>
               
@@ -38,7 +38,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex-grow mr-12 flex justify-center">
-                <div className="hidden lg:flex space-x-12"> {/* Use lg instead of md */}
+                <div className="hidden lg:flex space-x-12 mr-20"> {/* Use lg instead of md */}
                   {navigation.map(({ name, href, subItems }) => (
                     <div className="relative group" key={name}>
                       <Link href={href}>
@@ -47,8 +47,8 @@ export default function Navbar() {
                         </a>
                       </Link>
                       {subItems.length > 0 && (
-                        <div className="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-lg rounded-md">
-                          <div className="py-1">
+                        <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-md">
+                          <div className="py-0">
                             {subItems.map((item) => (
                               <Link href={href} key={item}>
                                 <a className="block px-8 py-4 text-sm text-gray-700 hover:bg-gray-100">{item}</a>
