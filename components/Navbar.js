@@ -21,20 +21,28 @@ export default function Navbar() {
             <div className="flex justify-between items-center h-24">
               {/* Desktop Logo */}
               <div className="hidden lg:block">
-                <img
-                  src="/logo.png"
-                  alt="Logo"
-                  className="h-[280px] w-[280px] xl:h-[280px] xl:w-[360px]"
-                />
+                <Link href="/">
+                  <a>
+                    <img
+                      src="/logo.png"
+                      alt="Logo"
+                      className="h-[280px] w-[280px] xl:h-[280px] xl:w-[360px]"
+                    />
+                  </a>
+                </Link>
               </div>
 
               {/* Mobile Logo */}
               <div className="block lg:hidden">
-                <img
-                  src="/MobileLogo.png"
-                  alt="Mobile Logo"
-                  className="h-[80px] w-[70px]"
-                />
+                <Link href="/">
+                  <a>
+                    <img
+                      src="/MobileLogo.png"
+                      alt="Mobile Logo"
+                      className="h-[80px] w-[70px]"
+                    />
+                  </a>
+                </Link>
               </div>
 
               <div className="flex-grow mr-12 flex justify-center">
