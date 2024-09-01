@@ -17,32 +17,33 @@ export default function Navbar() {
     <Disclosure as="nav" className="fixed top-0 w-full bg-[#3b445f] shadow-sm z-50 h-18">
       {({ open }) => (
         <>
-          <div className=" mx-auto">
+          <div className="mx-auto">
             <div className="flex justify-between items-center h-24">
               {/* Desktop Logo */}
               <div className="hidden lg:block">
                 <img
                   src="/logo.png"
                   alt="Logo"
-                  style={{ height: "260px", width: "280px" }}
+                  className="h-[280px] w-[280px] xl:h-[280px] xl:w-[360px]"
                 />
               </div>
-              
+
               {/* Mobile Logo */}
               <div className="block lg:hidden">
                 <img
                   src="/MobileLogo.png"
                   alt="Mobile Logo"
-                  style={{ height: "80px", width: "70px" }}
+                  className="h-[80px] w-[70px]"
                 />
               </div>
 
               <div className="flex-grow mr-12 flex justify-center">
-                <div className="hidden lg:flex space-x-12 mr-20"> {/* Use lg instead of md */}
+                <div className="hidden lg:flex space-x-12 lg:mr-24">
                   {navigation.map(({ name, href, subItems }) => (
                     <div className="relative group" key={name}>
                       <Link href={href}>
-                        <a className="inline-flex items-center py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100">
+                        <a className={`inline-flex items-center py-2 font-medium rounded-md text-white hover:text-[#475374] duration-100
+                          ${'text-sm' && 'xl:text-base' && '2xl:text-lg'}`}>
                           {name}
                         </a>
                       </Link>
@@ -63,7 +64,7 @@ export default function Navbar() {
               </div>
 
               <div className="flex items-center">
-                <div className="flex lg:hidden items-center"> {/* Use lg instead of md */}
+                <div className="flex lg:hidden items-center">
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md text-white hover:text-blue-900 duration-300">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
