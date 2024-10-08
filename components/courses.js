@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Course = () => {
     const router = useRouter();
@@ -44,13 +45,15 @@ const Course = () => {
                 <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
                     {sectors.map((sector, index) => (
                         <div key={index} className="bg-white bg-opacity-80 p-6 rounded-lg shadow-2xl flex flex-col items-center text-center">
-                            <div className={`${sector.bgColor} text-white p-4 rounded-full mb-4`}>
-                                <i className={`${sector.icon} text-2xl`}></i> {/* Replace with actual logo */}
-                            </div>
-                            <h3 className="text-xl font-semibold mb-2">{sector.title}</h3>
-                            <p className="text-gray-700 mb-4">{sector.description}</p>
-                            <a href="/test" className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
+                        <div className={`${sector.bgColor} text-white p-4 rounded-full mb-4`}>
+                            <i className={`${sector.icon} text-2xl`}></i> {/* Replace with actual logo */}
                         </div>
+                        <h3 className="text-xl font-semibold mb-2">{sector.title}</h3>
+                        <p className="text-gray-700 mb-4">{sector.description}</p>
+                        <Link href="/test">
+                            <a className="bg-[#3b445f] text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Read More</a>
+                        </Link>
+                    </div>
                     ))}
                 </div>
             </div>

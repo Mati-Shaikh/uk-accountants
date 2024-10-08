@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
+
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About us', href: '/story' },
@@ -21,29 +22,33 @@ export default function Navbar() {
             <div className="flex justify-between items-center h-24">
               {/* Desktop Logo */}
               <div className="hidden lg:block">
-                <Link href="/">
-                  <a>
-                    <img
-                      src="/Logo1.png"
-                      alt="Logo"
-                      className="h-[90px] w-[100px] xl:h-[90px] xl:w-[100px]"
-                    />
-                  </a>
-                </Link>
+              <Link href="/">
+  <a>
+    <Image
+      src="/Logo1.png" // Dynamic image source
+      alt="Logo"       // Alt text for the image
+      width={100}      // Set width in pixels
+      height={90}      // Set height in pixels
+      className="xl:h-[90px] xl:w-[100px]" // Additional responsive styling if needed
+    />
+  </a>
+</Link>
               </div>
 
               {/* Mobile Logo */}
               <div className="block lg:hidden">
-                <Link href="/">
-                  <a>
-                    <img
-                      src="/Logo1.png"
-                      alt="Mobile Logo"
-                      style={{marginLeft:"20px"}}
-                      className="h-[80px] w-[70px]"
-                    />
-                  </a>
-                </Link>
+              <Link href="/">
+  <a>
+    <Image
+      src="/Logo1.png"         // Image source
+      alt="Mobile Logo"        // Alt text for accessibility
+      width={70}               // Set width in pixels
+      height={80}              // Set height in pixels
+      style={{ marginLeft: "20px" }}  // Inline style for margin
+      className="h-[80px] w-[70px]"   // Additional class styling
+    />
+  </a>
+</Link>
               </div>
 
               <div className="flex-grow mr-12 flex justify-center">

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 // import './ContentPictureComponent.css'; // Uncomment if you have a CSS file
 
 const ContentPictureComponent = () => {
@@ -17,13 +18,14 @@ const ContentPictureComponent = () => {
       
       {/* Picture Section */}
       <div className="lg:w-1/3 p-4 mt-16 sm:mt-16 lg:mt-32 ml-32 flex justify-center">
-        <img
-          src="/1.png"
-          alt="Description of Image"
-          className="object-cover rounded-lg w-full max-w-md lg:max-w-full"
-          style={{ height: "auto" }} // Ensure height is auto to maintain aspect ratio
-        />
-      </div>
+    <Image
+        src="/1.png" // Image source
+        alt="Description of Image" // Alt text for the image
+        width={450} // Specify width
+        height={450} // Specify height
+        className="object-cover rounded-lg w-full max-w-md lg:max-w-full"
+    />
+</div>
     </div>
   );
 };

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
-
-// Import any necessary styles for the image if required
+import Image from 'next/image'; // Import Image component
 
 const LogoComponent = () => {
   const router = useRouter();
@@ -11,7 +10,6 @@ const LogoComponent = () => {
   };
 
   return (
-
     <div className="min-h-screen flex flex-col md:flex-row bg-white pb-24">
       {/* Left Side: Content Section */}
       <div className="flex-1 flex flex-col justify-center items-center bg-white p-8">
@@ -36,16 +34,18 @@ Contact us today to discover how our expertise and personalized approach can sup
       </div>
 
       {/* Right Side: Image Section */}
-      <div className="relative w-full md:w-1/2 h-96 md:h-auto mt-16 pr-4"> {/* Added mt-16 for spacing */}
-        <img 
+      <div className="relative w-full md:w-1/2 h-96 md:h-auto mt-16 pr-4">
+        <Image 
           src="/2.png" // Replace with the actual path to your image
           alt="Services Across the UK"
-          className="w-full h-full object-cover rounded-lg"
+          layout="fill" // Ensures the image fills the container
+          objectFit="cover" // Makes the image behave like 'object-cover'
+          className="rounded-lg"
         />
       </div>
     </div>
-    
   );
 };
 
 export default LogoComponent;
+

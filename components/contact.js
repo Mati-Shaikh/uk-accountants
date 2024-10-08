@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 
 const Contact = () => {
     const cards = [
@@ -27,7 +28,15 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {cards.map((card) => (
                         <div key={card.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                            <img src={card.imageUrl} alt={`Image ${card.id}`} className="w-full h-60 object-cover object-center" />
+                            <div className="relative w-full h-60"> {/* Wrapper div for layout fill */}
+                                <Image 
+                                    src={card.imageUrl} 
+                                    alt={`Image ${card.id}`} 
+                                    layout="fill" // Makes the image fill the container
+                                    objectFit="cover" // Ensures the image maintains aspect ratio and covers the area
+                                    className="rounded-lg"
+                                />
+                            </div>
                             <div className="p-4">
                                 <p className="text-gray-800 mb-2">{card.description}</p>
                                 <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
+import Image from 'next/image'; // Import the Image component
 const testimonials = [
   {
     quote: "This product is amazing! It changed my life.",
@@ -53,13 +53,16 @@ const Testimonial = () => {
           </button>
           <div className="flex justify-center">
             <div className="bg-white rounded-lg shadow-lg p-8 text-center max-w-md">
-              <div className="flex justify-center mb-4">
-                <img
-                  src={testimonials[currentIndex].image}
-                  alt={testimonials[currentIndex].name}
-                  className="w-20 h-20 rounded-full object-cover"
-                />
-              </div>
+              
+<div className="flex justify-center mb-4">
+    <Image
+        src={testimonials[currentIndex].image} // Dynamic image source
+        alt={testimonials[currentIndex].name}   // Alt text for the image
+        width={80}  // Specify width in pixels (same as w-20)
+        height={80} // Specify height in pixels (same as h-20)
+        className="rounded-full object-cover"   // Keep the same classes for styling
+    />
+</div>
               <p className="text-xl italic text-gray-800 mb-4">
                 {testimonials[currentIndex].quote}
               </p>

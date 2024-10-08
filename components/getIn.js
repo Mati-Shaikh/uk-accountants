@@ -1,17 +1,25 @@
 import React from 'react';
-import image1 from '../public/image.jpg'; // Replace with your image file path
+import Image from 'next/image'; // Import the Image component
 import { useRouter } from 'next/router';
+
 const AboutUsComponent = () => {
     const router = useRouter();
 
-  const handleClick = () => {
-    router.push('/story');
-  };
+    const handleClick = () => {
+        router.push('/story');
+    };
+
     return (
         <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-white">
             {/* Left Side (Image) */}
             <div className="md:w-1/2 pl-4">
-                <img src='/3.png' alt="About Us" className="w-1/2 h-auto rounded-lg"  style={{width:"40rem"}}/>
+                <Image 
+                    src="/3.png" // Replace with the correct path to your image
+                    alt="About Us" 
+                    width={640} // Specify the width
+                    height={480} // Specify the height
+                    className="rounded-lg"
+                />
             </div>
             {/* Right Side (Content and Button) */}
             <div className="md:w-1/2 text-black p-8 md:p-12 mt-6 md:mt-0">

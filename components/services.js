@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-
+import Image from 'next/image'; // Import the Image component
 const cards = [
   {
     logo: '/image1.jpg', // Replace with your logo image path
@@ -52,8 +52,14 @@ const ServiceComponent = () => {
           {cards.map((card, index) => (
             <div key={index} className="bg-white p-4 md:p-6 rounded-lg shadow-lg w-full md:w-80 text-center">
               <div className="flex justify-center mb-4">
-                <img src={card.logo} alt={card.name} className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover" />
-              </div>
+    <Image
+        src={card.logo}          // Dynamic image source
+        alt={card.name}           // Alt text for the image
+        width={96}                // Set width in pixels (24 * 4 for md:w-24)
+        height={96}               // Set height in pixels (24 * 4 for md:h-24)
+        className="rounded-full object-cover" // Styling for rounded and object-cover
+    />
+</div>
               <h3 className="text-lg md:text-xl font-semibold mb-2">{card.name}</h3>
               <p className="text-gray-700 mb-4">{card.description}</p>
               <button
