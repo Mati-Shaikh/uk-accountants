@@ -1,46 +1,44 @@
 import React from 'react';
 
 const LogoComponent = () => {
-  return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-white pb-24">
-      {/* Left Side: Content Section */}
-      <div className="flex-1 flex flex-col justify-center items-center bg-white p-8">
+  // Array of service sectors
+  const serviceSectors = [
+    { title: 'Healthcare', description: 'Medical practices, GPs, dentists, supported living, and care homes.' },
+    { title: 'Construction', description: 'Contractors, builders, and construction management firms.' },
+    { title: 'Real Estate', description: 'Property management, real estate agencies, and developers.' },
+    { title: 'Retail', description: 'Shops, e-commerce businesses on Shopify, Amazon, and TikTok.' },
+    { title: 'Hospitality', description: 'Hotels, restaurants, and event venues.' },
+    { title: 'Car Dealerships', description: 'Car garages, mechanics, paint, and spare parts shops.' },
+    { title: 'Financial Services', description: 'Mortgage brokers, insurance, investment firms, and financial advisors.' },
+    { title: 'Professional Services', description: 'Legal firms, consulting agencies, and marketing companies.' },
+    { title: 'Education', description: 'Schools, colleges, universities, and educational institutions.' },
+    { title: 'Technology', description: 'IT firms, software companies, and tech startups.' },
+    { title: 'Non-Profit Organizations', description: 'Charities, foundations, and community organizations.' },
+    { title: 'Transport and Logistics', description: 'Shipping companies, freight carriers, and logistics providers.' },
+    { title: 'Entertainment and Media', description: 'Film production, music, publishing, and media companies.' },
+    { title: 'Agriculture', description: 'Farms, agricultural businesses, and agribusinesses.' },
+    { title: 'Energy and Utilities', description: 'Oil, gas, renewable energy, and utility companies.' },
+    { title: 'Self-Employed Individuals', description: 'Chauffeurs, cleaning businesses, home food catering, hairdressers, and nail salons.' }
+  ];
 
-        {/* Accounting Services Section */}
-        <div className="text-left">
-          <h3 className="text-2xl font-semibold mb-4">Accounting Services:</h3>
-          <p className="mb-4">
-            At Wise Numbers LTD, we cater to a diverse clientele across various industries, each with its unique requirements. We meticulously identify all allowable tax expenses specific to each sector, ensuring full compliance with tax regulations while focusing on minimizing tax liabilities for every client we serve, so you can keep most of your earnings!
-          </p>
-          <p className="mb-4">
-            Our Service Sectors include but are not limited to:
-          </p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li><strong>Healthcare:</strong> Medical practices, GPs, dentists, supported living, and care homes.</li>
-            <li><strong>Construction:</strong> Contractors, builders, and construction management firms.</li>
-            <li><strong>Real Estate:</strong> Property management, real estate agencies, and developers.</li>
-            <li><strong>Retail:</strong> Shops, e-commerce businesses on Shopify, Amazon, and TikTok.</li>
-            <li><strong>Hospitality:</strong> Hotels, restaurants, and event venues.</li>
-            <li><strong>Car Dealerships:</strong> Car garages, mechanics, paint, and spare parts shops.</li>
-            <li><strong>Financial Services:</strong> Mortgage brokers, insurance and investment firms, and financial advisors.</li>
-            <li><strong>Professional Services:</strong> Legal firms, consulting agencies, and marketing companies.</li>
-            <li><strong>Education:</strong> Schools, colleges, universities, and educational institutions.</li>
-            <li><strong>Technology:</strong> IT firms, software companies, and tech startups.</li>
-            <li><strong>Non-Profit Organizations:</strong> Charities, foundations, and community organizations.</li>
-            <li><strong>Transport and Logistics:</strong> Shipping companies, freight carriers, and logistics providers.</li>
-            <li><strong>Entertainment and Media:</strong> Film production, music, publishing, and media companies.</li>
-            <li><strong>Agriculture:</strong> Farms, agricultural businesses, and agribusinesses.</li>
-            <li><strong>Energy and Utilities:</strong> Oil, gas, renewable energy, and utility companies.</li>
-            <li><strong>Self-Employed Individuals:</strong>
-              <ul className="list-disc list-inside pl-5 space-y-2">
-                <li>Chauffeurs – Handling income and expense management.</li>
-                <li>Cleaning Businesses – Managing bookkeeping and tax filings.</li>
-                <li>Home Food Catering – Financial planning and tax services for caterers.</li>
-                <li>Hairdressers and Nail Salons – Personal and business tax assistance, and financial management.</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  return (
+    <div className="min-h-screen bg-white pb-24">
+      {/* Heading */}
+      <div className="text-center my-8">
+        <h1 className="text-4xl font-extrabold text-black mb-4">Our Service Sectors</h1>
+        <p className="text-lg text-gray-700 mb-8">
+          We offer specialized accounting services tailored to various industries.
+        </p>
+      </div>
+
+      {/* Grid of Cards */}
+      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {serviceSectors.map((sector, index) => (
+          <div key={index} className="bg-white shadow-lg p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-2 text-center">{sector.title}</h3>
+            <p className="text-gray-700 text-center">{sector.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

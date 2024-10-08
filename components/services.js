@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 const cards = [
   {
     logo: '/image1.jpg', // Replace with your logo image path
-    name: 'Business Services',
+    name: 'Accounting Services',
     description: ' Expertly navigate complex tax regulations to optimize your business tax strategy, ensuring compliance while uncovering savings opportunities.',
   },
   {

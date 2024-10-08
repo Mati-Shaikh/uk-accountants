@@ -27,13 +27,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/image3.jpg")' }}>
+    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/4.png")' }}>
       <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
       <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
         
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8 bg-opacity-75">
           <div className="text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-300 md:text-gray-400">Contact Us</h2>
+            <h2 className="text-4xl md:text-4xl font-bold text-white md:text-white">Contact Us</h2>
             <p className="text-base md:text-lg text-gray-200 md:text-gray-100">
               If you have any questions or need further assistance, feel free to reach out to us.
             </p>
