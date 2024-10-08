@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/4.png")' }}>
+    <div className="min-h-screen bg-cover bg-center relative" style={{ backgroundImage: 'url("/4.PNG")' }}>
       <div className="absolute inset-0 bg-gray-900 opacity-40"></div>
       <div className="relative z-10 flex flex-col md:flex-row min-h-screen">
         
@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8">
+        <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-8 mt-16">
           <div className="max-w-md w-full space-y-8 bg-white rounded-xl shadow-lg p-6 md:p-10">
             <form className="space-y-6" onSubmit={onSubmit}>
               <div className="space-y-4">

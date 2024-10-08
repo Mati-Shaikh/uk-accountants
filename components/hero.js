@@ -19,7 +19,7 @@ const ContentPictureComponent = () => {
       {/* Picture Section */}
       <div className="lg:w-1/3 p-4 mt-16 sm:mt-16 lg:mt-32 ml-32 flex justify-center">
     <Image
-        src="/1.png" // Image source
+        src="/1.PNG" // Image source
         alt="Description of Image" // Alt text for the image
         width={450} // Specify width
         height={450} // Specify height

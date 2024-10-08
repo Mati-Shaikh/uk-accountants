@@ -14,7 +14,7 @@ const AboutUsComponent = () => {
             {/* Left Side (Image) */}
             <div className="md:w-1/2 pl-4">
                 <Image 
-                    src="/3.png" // Replace with the correct path to your image
+                    src="/3.PNG" // Replace with the correct path to your image
                     alt="About Us" 
                     width={640} // Specify the width
                     height={480} // Specify the height

@@ -36,7 +36,7 @@ Contact us today to discover how our expertise and personalized approach can sup
       {/* Right Side: Image Section */}
       <div className="relative w-full md:w-1/2 h-96 md:h-auto mt-16 pr-4">
         <Image 
-          src="/2.png" // Replace with the actual path to your image
+          src="/2.PNG" // Replace with the actual path to your image
           alt="Services Across the UK"
           layout="fill" // Ensures the image fills the container
           objectFit="cover" // Makes the image behave like 'object-cover'
